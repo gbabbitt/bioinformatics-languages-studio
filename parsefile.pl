@@ -8,7 +8,7 @@
 #...replacing the questions below with what you think the code right below it does
 
 # what does this line do?.....makes new directory for output files
-mkdir "ProcessedYeastAlns" or die "\nProcessedYeastAlns folder already exists. Delete it and try again.\n";
+mkdir "ProcessedYeastAlns"; #or die "\nProcessedYeastAlns folder already exists. Delete it and try again.\n";
 $filecount = 0;
 $file_iteration = 0;
 
@@ -40,7 +40,7 @@ $WatsonCrick = substr ($filename, 7, 1);
 # what do the next five lines of code do?
 $filelocation = "./YeastAlignments/"."$filename";
 if (length $ORFname == 7){
-open(INFILE, $filelocation) or die "Cannot open file";
+open (INFILE, $filelocation) or die "Cannot open file";
 }
 else {next;}
 open (OUTFILE, ">"."./ProcessedYeastAlns/"."$filename") || die " could not open output file\n";

@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 #Python program that runs through the files in 'YeastGenes' folder and finds the GC content of each sequence and total GC content
 # transcribes and finds the %AUGC of the third amino acid in the codon
-#@Author Madelyn R Schreiner | mrs1417, Dr.Gregory Babbitt
 
 import fileinput
 import os
@@ -14,8 +13,8 @@ import glob
 header = list()
 sequence = list()
 
-#Gene parsing function
-def parser():
+# main program
+def main():
     tot_file = 0
     path_foldername = "C:\\Users\\gabsbi\\Desktop\\YeastGenes"
     foldername = 'YeastGenes'
@@ -104,9 +103,9 @@ def thirdAd(seq):
         print("ERROR: thirdAd is not working correctly")
     
 
-parser()
-#printS()
 
-#end script
-print ("\nend myGeneParser.py")
-exit
+if __name__ == "__main__":
+    main()
+    #end script
+    print ("\nend myGeneParser.py")
+    exit
